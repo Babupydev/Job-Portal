@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}
+    Dashboard - Job Adda
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'core/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container dashboard">
+    <h2 class="text-center my-5">Welcome to your Dashboard, {{ user.first_name }}!</h2>
+
+    <!-- Example of Dashboard Content: Cards for different sections -->
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-briefcase fa-3x"></i>
+                    <h5 class="card-title mt-3">Your Job Applications</h5>
+                    <p class="card-text">View and manage all your job applications in one place.</p>
+                    <a href="#" class="btn btn-primary">View Applications</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-alt fa-3x"></i>
+                    <h5 class="card-title mt-3">Update Resume</h5>
+                    <p class="card-text">Keep your resume up to date for better job matches.</p>
+                    <a href="#" class="btn btn-primary">Update Resume</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-edit fa-3x"></i>
+                    <h5 class="card-title mt-3">Edit Profile</h5>
+                    <p class="card-text">Keep your profile details accurate for employers.</p>
+                    <a href="{% url 'profile' %}" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+    <!-- Include any extra JavaScript if needed -->
+{% endblock %}

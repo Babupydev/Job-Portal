@@ -1,0 +1,50 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Profile Page{% endblock %}
+<!-- Custom CSS  -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/profile.css' %}">
+{% endblock %}
+    
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2>Profile Information</h2>
+                </div>
+                <div class="card-body">
+                    {% comment %} <p><strong>First Name:</strong> {{ user.first_name }}</p>
+                    <p><strong>Last Name:</strong> {{ user.last_name }}</p> {% endcomment %}
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    
+                    <!-- Display additional profile information -->
+                    {% if user.recruiterprofile %}
+                        <p><strong>Company Name:</strong> {{ user.recruiterprofile.company_name }}</p>
+                        <p><strong>Company Website:</strong> <a href="{{ user.recruiterprofile.company_website }}" target="_blank">{{ user.recruiterprofile.company_website }}</a></p>
+                    {% elif user.candidateprofile %}
+                        <p><strong>Candidate Information:</strong> Additional candidate-specific fields here</p>
+                    {% else %}
+                        <p class="text-danger">Your profile type is not defined. Please contact support.</p>
+                    {% endif %}
+
+                    <div class="text-center mt-4">
+                        <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
+
+                        <!-- Conditional link to the appropriate dashboard -->
+                        {% if user.recruiterprofile %}
+                            <a href="{% url 'recruiter_dashboard' %}" class="btn btn-warning">Recruiter Dashboard</a>
+                        {% elif user.candidateprofile %}
+                            <a href="{% url 'candidate_dashboard' %}" class="btn btn-warning">Candidate Dashboard</a>
+                        {% else %}
+                            <p class="text-danger">Your profile type is not defined. Please contact support.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

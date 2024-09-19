@@ -1,0 +1,114 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid #007bff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.left-side {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://img.freepik.com/free-photo/login-form-button-graphic-concept_53876-133557.jpg?w=826&t=st=1726409161~exp=1726409761~hmac=2f645aee5ad5297a5f9e7d882d4cf1b0a7fef56a0f7966cf764c069fc09829ec');
+  background-size: cover;
+  background-position: center;
+}
+
+.right-side {
+  padding: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  color: #007bff;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0 10px 10px 0;
+  padding: 15px;
+  font-weight: 400;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+      flex-direction: column;
+  }
+
+  .left-side {
+      height: 200px;
+  }
+}

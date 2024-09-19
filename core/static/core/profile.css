@@ -1,0 +1,75 @@
+/* Profile Page Styles */
+
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        margin: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
