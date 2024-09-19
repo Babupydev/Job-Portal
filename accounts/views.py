@@ -11,7 +11,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             auth_login(request, user)
-            return redirect('home')
+            return redirect('index')
         else:
             messages.error(request, 'Invalid email or password.')
     else:
@@ -30,7 +30,7 @@ def logout_view(request):
 
 
 def home_view(request):
-    return render(request,'core/index.html')
+    return render(request,'index.html')
 # 
 from django.shortcuts import render
 from django.http import HttpResponse

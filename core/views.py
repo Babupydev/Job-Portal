@@ -10,7 +10,7 @@ def index_view(request):
         return redirect('candidate_dashboard')
     else:
         # Render a page or a template with the message
-        return render(request, 'core/index.html', {
+        return render(request, 'index.html', {
             'error_message': 'Your profile type is not defined. Please contact support.'
         })
 
