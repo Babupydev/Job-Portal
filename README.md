@@ -46,7 +46,9 @@ Here are some key pages of the project:
 )
 -  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/login%20page.png)
 - 👤 **Profile Management**
--  ![Alt text]()
+-  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/2150e2fbd4b4f222bd6c41cb042208080d16384d/profile%20information.png
+)
+-  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/2150e2fbd4b4f222bd6c41cb042208080d16384d/about%20the%20developer.png)
 
 ## 🚀 Getting Started
 
