@@ -1,29 +1,55 @@
-🏢 Job Portal Project
-This Job Portal Website is built using Django. It allows candidates to find jobs and recruiters to post jobs. The portal includes several key pages like Home, Dashboard, Login, Signup, and Profile for both candidates and recruiters.
+# 🧑‍💻 Job Portal
 
-🔑 Key Features
-- 🏠 Home Page: Introduction to the platform with a search bar for jobs.
-- 📋 Dashboard: Displays user-specific details (applications for candidates, job postings for recruiters).
-- 🔐 Login: Simple login form using email and password.
-- 📝 Signup: New user registration page for recruiters and candidates.
-- 👤 Profile Management: Allows users to view and update their details.
-- 🔍 Job Listings: Browse and apply for jobs (Candidates), Post and manage jobs (Recruiters).
+A full-featured job portal web application built using **Django** and **Bootstrap**. It allows recruiters to post jobs, manage applicants, and candidates to search and apply for jobs.
 
-📁 Project Structure
-- Home Page: index.html
+## 🌟 Features
 
-** Displays platform overview and a job search option.
-**Shows recently posted jobs.
--Dashboard: dashboard.html
+### 🚀 General
+- 🏠 **Home Page**: Interactive home page showcasing job postings and allowing easy navigation.
+- 🔑 **Authentication**: Secure login and signup for both recruiters and candidates.
+- 👤 **Profile Management**: Separate profiles for recruiters and candidates.
+- 🔄 **Role-based Access**: Different views for recruiters and candidates.
+  
+### 👥 Recruiter Dashboard
+- ➕ **Post Jobs**: Easy interface for recruiters to post job openings.
+- 📈 **Job Statistics**: Overview of total jobs posted, active jobs, and received applications.
+- 🔄 **Manage Jobs**: Edit, update, or delete job postings.
+- 🗂 **View Applications**: Review applications received for each job posting.
 
-**Candidates: View applied and saved jobs.
-**Recruiters: Manage job postings, view applications.
--Login Page: login.html
+### 👩‍💼 Candidate Dashboard
+- 🔍 **Job Search**: Filter through jobs by title, location, or company.
+- 📑 **Job Applications**: View and manage jobs applied for.
+- 📤 **Apply for Jobs**: Apply directly from the job listing page.
 
-**User login functionality with email and password authentication.
--Signup Page: signup.html
+## 🛠️ Tech Stack
 
-**Registration form allowing users to choose their profile type (Recruiter or Candidate).
--Profile Page: profile.html
+- **Backend**: Django (Python)
+- **Frontend**: HTML, CSS (Bootstrap)
+- **Database**: PostgreSQL
+- **Version Control**: Git and GitHub
 
-**Users can update their personal information and manage their account.
+## 📂 Folder Structure
+
+
+## 🖼️ Screenshots
+
+Here are some key pages of the project:
+
+- 🏠 **Home Page**
+- 
+- 📋 **Recruiter Dashboard**
+- 
+- 📝 **Login and Signup Pages**
+-  
+- 👤 **Profile Management**
+-  
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- PostgreSQL
+- Git
+
+
