@@ -40,15 +40,15 @@ Here are some key pages of the project:
 - 📋 **Recruiter Dashboard**
 - ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f58cc4db82ff3eaf8f5e19a1a442220580340b2d/recruiter%20dashboard.png)
 - 📝 **Login and Signup Pages**
--  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/signup.png)
--  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/candidate%20signup.png)
--  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/recruiter%20signup.png
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/signup.png)
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/candidate%20signup.png)
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/recruiter%20signup.png
 )
--  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/login%20page.png)
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f97c8ebf91345d31eb0d0f954dfbdb57d302a598/login%20page.png)
 - 👤 **Profile Management**
--  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/2150e2fbd4b4f222bd6c41cb042208080d16384d/profile%20information.png
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/2150e2fbd4b4f222bd6c41cb042208080d16384d/profile%20information.png
 )
--  ![Alt text](https://github.com/Babupydev/Job-Portal/blob/2150e2fbd4b4f222bd6c41cb042208080d16384d/about%20the%20developer.png)
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/2150e2fbd4b4f222bd6c41cb042208080d16384d/about%20the%20developer.png)
 
 ## 🚀 Getting Started
 
