@@ -36,13 +36,13 @@ A full-featured job portal web application built using **Django** and **Bootstra
 Here are some key pages of the project:
 
 - 🏠 **Home Page**
-- https://github.com/Babupydev/Job-Portal/blob/22f01332105c2ef37d4ff73098ba1409d9f99505/home.png
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/22f01332105c2ef37d4ff73098ba1409d9f99505/home.png)
 - 📋 **Recruiter Dashboard**
-- 
+- ![Alt text]()
 - 📝 **Login and Signup Pages**
--  
+-  ![Alt text]()
 - 👤 **Profile Management**
--  
+-  ![Alt text]()
 
 ## 🚀 Getting Started
 
