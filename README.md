@@ -38,7 +38,7 @@ Here are some key pages of the project:
 - 🏠 **Home Page**
 - ![Alt text](https://github.com/Babupydev/Job-Portal/blob/22f01332105c2ef37d4ff73098ba1409d9f99505/home.png)
 - 📋 **Recruiter Dashboard**
-- ![Alt text]()
+- ![Alt text](https://github.com/Babupydev/Job-Portal/blob/f58cc4db82ff3eaf8f5e19a1a442220580340b2d/recruiter%20dashboard.png)
 - 📝 **Login and Signup Pages**
 -  ![Alt text]()
 - 👤 **Profile Management**
