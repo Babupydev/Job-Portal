@@ -1,0 +1,143 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Welcome to Job Portal{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Find Your Dream Job</h1>
+            <p class="lead">Join thousands of professionals and land your next opportunity with our platform.</p>
+            
+            {% if user.is_authenticated %}
+                {% if user.recruiterprofile %}
+                    <a href="{% url 'recruiter_dashboard' %}" class="btn btn-primary btn-lg">Go to Recruiter Dashboard</a>
+                {% elif user.candidateprofile %}
+                    <a href="{% url 'candidate_dashboard' %}" class="btn btn-primary btn-lg">Go to Candidate Dashboard</a>
+                {% else %}
+                    <p class="text-danger">Your profile type is not defined. Please contact support.</p>
+                {% endif %}
+            {% else %}
+                <a href="{% url 'signup_select' %}" class="btn btn-primary btn-lg">Get Started</a>
+            {% endif %}
+        </div>
+    </section>
+    
+
+
+    <!-- Benefits Section -->
+    <section class="benefits-section py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-briefcase fa-3x mb-3"></i>
+                    <h3>Wide Job Listings</h3>
+                    <p>Access a wide range of job opportunities across different industries.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-user-tie fa-3x mb-3"></i>
+                    <h3>Professional Network</h3>
+                    <p>Connect with employers and like-minded professionals.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-bolt fa-3x mb-3"></i>
+                    <h3>Fast and Easy</h3>
+                    <p>Apply for jobs quickly with a user-friendly interface and tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Developer Section -->
+    <section class="about-developer-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About the Developer</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p>Developed by <strong>Babu Malik</strong>, this platform is designed to help job seekers connect with potential employers effortlessly. Babu Malik is a passionate Python/Django developer with extensive experience in building high-quality, efficient web applications.</p>
+                    <a href="https://www.linkedin.com/in/malik-babu-b52579217/" class="btn btn-outline-primary">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Key Features</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-search fa-3x mb-3"></i>
+                    <h3>Job Search</h3>
+                    <p>Find jobs that match your skills and preferences.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-envelope fa-3x mb-3"></i>
+                    <h3>Application Management</h3>
+                    <p>Keep track of your job applications and interviews.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-comments fa-3x mb-3"></i>
+                    <h3>Employer Messaging</h3>
+                    <p>Communicate directly with employers and recruiters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            <h2>Ready to Find Your Next Job?</h2>
+            <p>Sign up now and take the first step towards your dream career.</p>
+            <a href="{% url 'signup_select' %}" class="btn btn-lg btn-primary">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Optional Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">What Users Are Saying</h2>
+            <div class="testimonial-wrapper">
+                <div class="testimonial">
+                    <img src="{% static "core/img/photo1.png" %}" alt="John Doe" class="testimonial-photo">
+                    <blockquote class="blockquote">
+                        <p>"This platform helped me land my dream job in no time!"</p>
+                        <footer class="blockquote-footer">John Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <img src="{% static "core/img/photo1.png" %}" alt="John Doe" class="testimonial-photo">
+                    <blockquote class="blockquote">
+                        <p>"This platform helped me land my dream job in no time!"</p>
+                        <footer class="blockquote-footer">John Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <img src="{% static "core/img/photo1.png" %}" alt="John Doe" class="testimonial-photo">
+                    <blockquote class="blockquote">
+                        <p>"This platform helped me land my dream job in no time!"</p>
+                        <footer class="blockquote-footer">John Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <img src="{% static "core/img/photo1.png" %}" alt="John Doe" class="testimonial-photo">
+                    <blockquote class="blockquote">
+                        <p>"This platform helped me land my dream job in no time!"</p>
+                        <footer class="blockquote-footer">John Doe</footer>
+                    </blockquote>
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}
+

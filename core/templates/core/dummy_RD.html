@@ -1,0 +1,162 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Recruiter Dashboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create_job' %}">
+                            <i class="fas fa-plus-circle"></i> Post a Job
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'manage_jobs' %}">
+                            <i class="fas fa-briefcase"></i> Manage Jobs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'view_applications' %}">
+                            <i class="fas fa-paperclip"></i> View Applications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile_settings' %}">
+                            <i class="fas fa-user-cog"></i> Profile Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Welcome, {{ user.first_name }}!</h1>
+            </div>
+
+            <!-- Job Posting Stats -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Jobs Posted</h5>
+                            <p class="card-text">{{ job_count }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Active Job Postings</h5>
+                            <p class="card-text">{{ active_jobs }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Applications Received</h5>
+                            <p class="card-text">{{ application_count }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Job Postings -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    Recent Job Postings
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Job Title</th>
+                                <th>Company</th>
+                                <th>Date Posted</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for job in recent_jobs %}
+                            <tr>
+                                <td>{{ job.title }}</td>
+                                <td>{{ job.company_name }}</td>
+                                <td>{{ job.date_posted }}</td>
+                                <td>{{ job.status }}</td>
+                                <td>
+                                    <a href="{% url 'edit_job' job.id %}" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Edit</a>
+                                    <a href="{% url 'delete_job' job.id %}" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-center">No job postings found.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Applications -->
+            <div class="card">
+                <div class="card-header">
+                    Recent Applications
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Applicant</th>
+                                <th>Job Title</th>
+                                <th>Date Applied</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for application in recent_applications %}
+                            <tr>
+                                <td>{{ application.applicant_name }}</td>
+                                <td>{{ application.job.title }}</td>
+                                <td>{{ application.date_applied }}</td>
+                                <td>{{ application.status }}</td>
+                                <td>
+                                    <a href="{% url 'view_application' application.id %}" class="btn btn-sm btn-info"><i class="fas fa-eye"></i> View</a>
+                                    <a href="{% url 'reject_application' application.id %}" class="btn btn-sm btn-danger"><i class="fas fa-times"></i> Reject</a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-center">No recent applications found.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{% endblock %}

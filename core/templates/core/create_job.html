@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Post a Job{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'core/create_job.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="create-job-container">
+    <h2 class="my-4">Post a New Job</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_title" class="form-label">Job Title</label>
+            {{ form.title }}
+        </div>
+        <div class="mb-3">
+            <label for="id_company_name" class="form-label">Company Name</label>
+            {{ form.company_name }}
+        </div>
+        <div class="mb-3">
+            <label for="id_location" class="form-label">Location</label>
+            {{ form.location }}
+        </div>
+        <div class="mb-3">
+            <label for="id_job_type" class="form-label">Job Type</label>
+            {{ form.job_type }}
+        </div>
+        <div class="mb-3">
+            <label for="id_description" class="form-label">Job Description</label>
+            {{ form.description }}
+        </div>
+        <div class="mb-3">
+            <label for="id_salary" class="form-label">Salary (Optional)</label>
+            {{ form.salary }}
+        </div>
+        <div class="mb-3">
+            <label for="id_requirements" class="form-label">Requirements</label>
+            {{ form.requirements }}
+        </div>
+        <div class="mb-3">
+            <label for="id_last_date_to_apply" class="form-label">Last Date to Apply</label>
+            {{ form.last_date_to_apply }}
+        </div>
+        <button type="submit" class="btn btn-primary">Post Job</button>
+    </form>
+</div>
+{% endblock %}

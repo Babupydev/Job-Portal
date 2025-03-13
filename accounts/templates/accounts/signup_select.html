@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}SignUp Select{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'accounts/css/signup_select.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Role Selection Section -->
+<section class="hero-section">
+    <div class="container">
+        <h2 class="display-4">Signup Now</h2>
+        <p class="lead">Select whether you are a Recruiter or a Candidate to proceed with the signup.</p>
+        <div class="card-group">
+            <!-- Recruiter Signup Card -->
+            <div class="card">
+                <img src="{% static 'accounts/img/recruiter_signup.png' %}" class="card-img-top" alt="Recruiter Signup">
+                <div class="card-body">
+                    <h5 class="card-title">Recruiter</h5>
+                    <p class="card-text">Sign up as a Recruiter to post job openings and manage applications.</p>
+                    <a href="{% url "recruiter_signup" %}" class="btn btn-primary">Sign Up as Recruiter</a>
+                </div>
+            </div>
+            <!-- Candidate Signup Card -->
+            <div class="card">
+                <img src="{% static 'accounts/img/candidate-signup.png' %}" class="card-img-top" alt="Candidate Signup">
+                <div class="card-body">
+                    <h5 class="card-title">Candidate</h5>
+                    <p class="card-text">Sign up as a Candidate to apply for jobs and manage your profile.</p>
+                    <a href="{% url "candidate_signup" %}" class="btn btn-primary">Sign Up as Candidate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %} 
+
+   
